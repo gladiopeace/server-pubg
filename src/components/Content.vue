@@ -55,7 +55,7 @@
     watch: {
       currentPage: function (newValue) {
         console.log(newValue)
-        axios.get(`http://localhost:3000/page?id=${newValue}`)
+        axios.get(`http://127.0.0.1:3000/page?id=${newValue}`)
         .then(res=>{
           this.$store.state.product = res.data
         })

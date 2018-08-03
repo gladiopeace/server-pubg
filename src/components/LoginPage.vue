@@ -25,7 +25,7 @@
         },
         methods: {
             login() {
-                axios.post(`http://localhost:3000/login?username=${this.username}&password=${this.password}`)
+                axios.post(`http://127.0.0.1:3000/login?username=${this.username}&password=${this.password}`)
                 .then(res=>{
                    if(res.data == 'Failed'){
                        console.log("Failed");
