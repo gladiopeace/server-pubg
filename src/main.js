@@ -77,7 +77,7 @@ new Vue({
   template: '<App/>',
   store: index,
   beforeCreate(){
-    axios.get('http://127.0.0.1:3000/page?id=1')
+    axios.get('http://45.32.47.212:3000/page?id=1')
     .then(res=>{
       this.$store.state.product = res.data
     });
