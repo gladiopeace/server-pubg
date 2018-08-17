@@ -15,7 +15,13 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "babel-polyfill": "^6.26.0",
+    "element-ui": "^2.4.6",
+    "onsenui": "^2.10.4",
+    "sass-loader": "^7.1.0",
     "vue": "^2.5.2",
+    "vue-mq": "^0.2.1",
+    "vue-onsenui": "^2.6.1",
     "vue-router": "^3.0.1",
     "vuetify": "^1.0.0",
     "vuex": "^3.0.1",

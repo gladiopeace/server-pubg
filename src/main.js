@@ -2,10 +2,13 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
+import ElemenUI from 'element-ui'
+import VueMq from 'vue-mq'
 import axios from 'axios'
 import index from '../store/index.js'
 import router from './router'
 import {
+  VInput,
   Vuetify,
   VApp,
   VNavigationDrawer,
@@ -34,6 +37,7 @@ import '../node_modules/vuetify/src/stylus/app.styl'
 Vue.use(Vuetify, {
   components: {
     VApp,
+    VInput,
     VNavigationDrawer,
     VFooter,
     VList,
@@ -69,6 +73,15 @@ Vue.use(Vuetify, {
 
 Vue.config.productionTip = false
 
+Vue.use(VueMq,{
+  breakpoints : {
+    mobile : 450,
+    tablet : 900,
+    laptop : 1250,
+    desktop : Infinity
+  }
+})
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
@@ -77,7 +90,7 @@ new Vue({
   template: '<App/>',
   store: index,
   beforeCreate(){
-    axios.get('http://45.32.47.212:3000/page?id=1')
+    axios.get('http://localhost:3000/page?id=1')
     .then(res=>{
       this.$store.state.product = res.data
     });
